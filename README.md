@@ -36,6 +36,5 @@ yarn build-prod (for prod)
 - react-native 0.72
 - final-form
 - polyglot
-- material 5
 - redux-toolkit
 - rtk-query
