@@ -8,7 +8,6 @@ import {
 import { authApi } from './api/authApi';
 import { postsApi } from './api/postsApi';
 import { usersApi } from './api/usersApi';
-import { loadState } from '../utils/reduxSyncStorage';
 import userSlice from './slices/userSlice';
 import { extendedUsersSlice } from './slices/usersSlice';
 import { extendedPostsSlice } from './slices/postsSlice';
@@ -34,7 +33,7 @@ const rootReducer: Reducer = (state: RootState, action: AnyAction) => {
 export const store = configureStore({
   reducer: rootReducer,
   devTools: process.env.STAGE === 'dev',
-  preloadedState: loadState(),
+  // preloadedState: loadState(),
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware()
       .concat(authApi.middleware)
